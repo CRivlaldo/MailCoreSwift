@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MailCoreSwift"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "A Swift wrapper of mailcore2-ios."
 
   # This description is used to generate tags and improve search results.
@@ -106,7 +106,8 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  s.preserve_paths = "MailCoreSwift.modulemap"
+  s.module_map = "MailCoreSwift.modulemap"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
