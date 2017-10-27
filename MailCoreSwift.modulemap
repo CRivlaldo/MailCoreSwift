@@ -1,0 +1,6 @@
+framework module MailCoreSwift {
+    umbrella header "MailCoreSwift.h"
+    
+    export *
+    module * { export * }
+}

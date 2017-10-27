@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		509B4DF91FA354EA0036D191 /* MailCoreMega.h in Headers */ = {isa = PBXBuildFile; fileRef = 509B4DF81FA354EA0036D191 /* MailCoreMega.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50BFC38F1FA3398C00F9A4BF /* MailCoreSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BFC38D1FA3398C00F9A4BF /* MailCoreSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E41B3D6219A4F1B753C0270 /* Pods_MailCoreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941C45229A3C75E4E685F79D /* Pods_MailCoreSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		509B4DF71FA352B80036D191 /* MailCoreSwift.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = MailCoreSwift.modulemap; sourceTree = "<group>"; };
+		509B4DF81FA354EA0036D191 /* MailCoreMega.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailCoreMega.h; sourceTree = "<group>"; };
 		50BFC38A1FA3398C00F9A4BF /* MailCoreSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MailCoreSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BFC38D1FA3398C00F9A4BF /* MailCoreSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailCoreSwift.h; sourceTree = "<group>"; };
 		50BFC38E1FA3398C00F9A4BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				50BFC38C1FA3398C00F9A4BF /* MailCoreSwift */,
+				509B4DF71FA352B80036D191 /* MailCoreSwift.modulemap */,
 				50BFC38B1FA3398C00F9A4BF /* Products */,
 				286C8450CDD5A0FFDF2F6826 /* Pods */,
 				9AD8BCAA2DA4026F78CA3215 /* Frameworks */,
@@ -62,6 +66,7 @@
 		50BFC38C1FA3398C00F9A4BF /* MailCoreSwift */ = {
 			isa = PBXGroup;
 			children = (
+				509B4DF81FA354EA0036D191 /* MailCoreMega.h */,
 				50BFC38D1FA3398C00F9A4BF /* MailCoreSwift.h */,
 				50BFC38E1FA3398C00F9A4BF /* Info.plist */,
 			);
@@ -83,6 +88,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509B4DF91FA354EA0036D191 /* MailCoreMega.h in Headers */,
 				50BFC38F1FA3398C00F9A4BF /* MailCoreSwift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +101,7 @@
 			buildConfigurationList = 50BFC3921FA3398C00F9A4BF /* Build configuration list for PBXNativeTarget "MailCoreSwift" */;
 			buildPhases = (
 				EE373693BF6715E79AE0EB84 /* [CP] Check Pods Manifest.lock */,
+				505A1A551FA35B8C0073EB70 /* ShellScript */,
 				50BFC3851FA3398C00F9A4BF /* Sources */,
 				50BFC3861FA3398C00F9A4BF /* Frameworks */,
 				50BFC3871FA3398C00F9A4BF /* Headers */,
@@ -153,6 +160,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		505A1A551FA35B8C0073EB70 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "clang \"$PODS_ROOT/Headers/Public/mailcore2-ios/MailCore/MailCore.h\" -ObjC --preprocess --no-line-commands -nostdinc --include-directory \"$PODS_ROOT/Headers/Public/mailcore2-ios\" --include-directory \"$SRCROOT/MailCoreSwift/system\" -o \"$SRCROOT/MailCoreSwift/MailCoreMega.h\"";
+		};
 		9C98F50EEA34255E7F3B4787 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +346,7 @@
 				INFOPLIST_FILE = MailCoreSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = $SRCROOT/MailCoreSwift.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilitylab.MailCoreSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -348,6 +369,7 @@
 				INFOPLIST_FILE = MailCoreSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = $SRCROOT/MailCoreSwift.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilitylab.MailCoreSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
