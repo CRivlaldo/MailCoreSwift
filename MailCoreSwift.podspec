@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MailCoreSwift"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "A Swift wrapper of mailcore2-ios."
 
   # This description is used to generate tags and improve search results.
