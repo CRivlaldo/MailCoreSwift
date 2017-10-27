@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5048AA181FA362D50072034B /* MailCoreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5048AA171FA362D50072034B /* MailCoreSwift.swift */; };
 		509B4DF91FA354EA0036D191 /* MailCoreMega.h in Headers */ = {isa = PBXBuildFile; fileRef = 509B4DF81FA354EA0036D191 /* MailCoreMega.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50BFC38F1FA3398C00F9A4BF /* MailCoreSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BFC38D1FA3398C00F9A4BF /* MailCoreSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E41B3D6219A4F1B753C0270 /* Pods_MailCoreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941C45229A3C75E4E685F79D /* Pods_MailCoreSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5048AA171FA362D50072034B /* MailCoreSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailCoreSwift.swift; sourceTree = "<group>"; };
 		509B4DF71FA352B80036D191 /* MailCoreSwift.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = MailCoreSwift.modulemap; sourceTree = "<group>"; };
 		509B4DF81FA354EA0036D191 /* MailCoreMega.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailCoreMega.h; sourceTree = "<group>"; };
 		50BFC38A1FA3398C00F9A4BF /* MailCoreSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MailCoreSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				509B4DF81FA354EA0036D191 /* MailCoreMega.h */,
 				50BFC38D1FA3398C00F9A4BF /* MailCoreSwift.h */,
 				50BFC38E1FA3398C00F9A4BF /* Info.plist */,
+				5048AA171FA362D50072034B /* MailCoreSwift.swift */,
 			);
 			path = MailCoreSwift;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 				TargetAttributes = {
 					50BFC3891FA3398C00F9A4BF = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -213,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5048AA181FA362D50072034B /* MailCoreSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8973354C77B397AA652596AE /* Pods-MailCoreSwift.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -350,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilitylab.MailCoreSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -359,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52D20C4D76C0436AC83E8D55 /* Pods-MailCoreSwift.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
